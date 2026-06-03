@@ -1,0 +1,39 @@
+# ============================================================
+# 堰塞坝表层颗粒物质智能检测分析 - 配置文件
+# ============================================================
+
+# YOLOv8 模型配置
+yolo:
+  model_path: "yolov8x.pt"
+  conf_threshold: 0.25
+  iou_threshold: 0.45
+  device: "cuda"
+  classes: null
+
+# SAM (Segment Anything Model) 配置
+sam:
+  model_type: "vit_h"
+  checkpoint_path: "sam_vit_h_4b8939.pth"
+  device: "cuda"
+
+# 粒径测量配置
+measurement:
+  pixel_size_mm: null
+  reference_length_pixels: null
+  reference_length_mm: null
+  min_area_pixels: 100
+  max_area_pixels: 100000
+  long_short_axis_ratio_max: 10.0
+
+# 统计报告配置
+statistics:
+  bin_count: 30
+  output_dir: "outputs"
+  save_masks: true
+  save_overlay: true
+  report_format: "pdf"
+
+# 数据路径
+data:
+  input_image: ""
+  output_dir: "outputs"
