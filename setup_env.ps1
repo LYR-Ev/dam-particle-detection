@@ -49,7 +49,7 @@ Write-Host "`n[>>] Installing PyTorch CUDA 12.4 (~2.5GB, please be patient)..." 
 
 # ---- 5. Install ultralytics and project deps ----
 Write-Host "`n[>>] Installing ultralytics and project deps ..." -ForegroundColor Yellow
-& $venvPython -m pip install ultralytics opencv-python matplotlib scipy scikit-image pandas pyyaml tqdm
+& $venvPython -m pip install ultralytics segment-anything opencv-python matplotlib scipy scikit-image pandas pyyaml tqdm
 
 # ---- 6. Verify CUDA ----
 Write-Host "`n[>>] Verifying CUDA availability ..." -ForegroundColor Yellow
