@@ -1,0 +1,11 @@
+# 石头颗粒物检测数据集 - YOLO格式
+# 无人机正射拍摄堰塞坝表层场景
+# 本地副本（用于沙箱环境训练，避免写入数据集原目录受限）
+
+path: d:/19701/Source/Repos/dam-particle-detection/dataset
+train: images
+val: images
+test: images
+
+nc: 1
+names: ['rock']

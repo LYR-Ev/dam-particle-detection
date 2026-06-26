@@ -4,7 +4,7 @@
 
 # YOLOv8 模型配置
 yolo:
-  model_path: "yolov8x.pt"
+  model_path: "./models/best.pt"
   conf_threshold: 0.25
   iou_threshold: 0.45
   device: "cuda"

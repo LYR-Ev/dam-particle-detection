@@ -1,41 +1,71 @@
-# Python
+# ============================================================
+# .gitignore - 堰塞坝表层颗粒物质智能检测分析
+# ============================================================
+
+# ---- Python ----
 __pycache__/
 *.py[cod]
+*$py.class
 *.egg-info/
 dist/
 build/
 .eggs/
 
-# 虚拟环境
+# ---- 虚拟环境 ----
 venv/
 .venv/
+.venv312/
 env/
 .env/
+ENV/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# ---- 训练相关 ----
+# 训练运行输出（runs/ 包含训练曲线、权重等，体积大）
+runs/
+# 训练缓存重定向目录（沙箱环境）
+.cache/
+# YOLO labels.cache 文件
+labels.cache
+*.cache
 
-# 模型权重文件（太大，需单独下载）
+# ---- 模型权重文件（体积大，需单独下载）----
 *.pt
 *.pth
 *.onnx
 *.engine
+*.weights
 
-# 输出目录
+# ---- 输出目录 ----
 outputs/
 
-# PDF 论文
+# ---- 文档/报告（非代码文件）----
 *.pdf
-
-# 临时文件
-*.log
-*.tmp
+*.docx
+项目进度报告*
 paper_text.txt
 
-# 系统文件
+# ---- 临时文件 ----
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# ---- IDE / 编辑器 ----
+.vscode/
+.idea/
+*.code-workspace
+
+# ---- 系统文件 ----
 .DS_Store
 Thumbs.db
 Desktop.ini
+ehthumbs.db
+
+# ---- Jupyter Notebook 检查点 ----
+.ipynb_checkpoints/
+
+# ---- 数据集（如数据集较大可取消注释）----
+# dataset/images/
+# dataset/labels/
